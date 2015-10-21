@@ -138,3 +138,11 @@ function componentToHex(c) {
   var hex = c.toString(16);
   return hex.length == 1 ? "0" + hex : hex;
 }
+
+// Takes any string, and converts it into
+// a URL-friendly set of characters.
+function slugify = function(name) {
+ 	
+    // Reduces string to lowercase letters and dashes ("-").
+    return name.toLowerCase().replace(/[^\w ]+/g,'').replace(/ +/g,'-');
+};
